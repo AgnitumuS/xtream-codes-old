@@ -1,0 +1,7 @@
+version: "3.5"
+services:
+  xtream-codes:
+    container_name: xtream-codes
+    image: xtream-codes:latest
+    ports:
+      - "9999:4000"
