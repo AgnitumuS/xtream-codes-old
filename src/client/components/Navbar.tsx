@@ -23,6 +23,13 @@ export const Navbar = () => {
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
+          colorScheme={"whiteAlpha"}
+          bg={useColorModeValue("white", "gray.800")}
+          color={useColorModeValue("black", "white")}
+          _hover={{
+            textDecoration: "none",
+            bg: useColorModeValue("gray.100", "whiteAlpha.200"),
+          }}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           aria-label={"Open Menu"}
           display={{ md: "none" }}
