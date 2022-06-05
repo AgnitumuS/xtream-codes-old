@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   return (
     <Box px={4}>
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Flex h={"4rem"} alignItems={"center"} justifyContent={"space-between"}>
         <IconButton
           size={"md"}
           colorScheme={"whiteAlpha"}
