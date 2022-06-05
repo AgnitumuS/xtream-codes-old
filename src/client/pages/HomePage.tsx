@@ -1,5 +1,6 @@
 import React from "react"
+import { Box } from "@chakra-ui/react"
 
 export const HomePage = () => {
-  return <div className="Home">Home</div>
+  return <Box className="Home">Home</Box>
 }

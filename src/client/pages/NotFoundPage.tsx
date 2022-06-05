@@ -1,9 +1,10 @@
 import React from "react"
+import { Box } from "@chakra-ui/react"
 
 export const NotFoundPage = () => {
   return (
-    <div className="NotFound">
+    <Box className="NotFound">
       <>Not found!</>
-    </div>
+    </Box>
   )
 }
