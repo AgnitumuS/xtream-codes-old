@@ -48,7 +48,8 @@ export const InfoPage = () => {
     refetch,
   }: UseQueryResult<XtreamCodes, Error> = useQuery(
     ["info", username],
-    fetchInfo
+    fetchInfo,
+    { refetchOnWindowFocus: false }
   )
 
   if (isLoading) {
