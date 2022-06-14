@@ -7,10 +7,10 @@ import {
   FormControl,
   FormLabel,
   Heading,
-  HStack,
   Input,
   Stack,
   useColorModeValue,
+  SimpleGrid,
 } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 
@@ -54,8 +54,8 @@ export const HomePage = () => {
             boxShadow={"base"}
             p={8}
           >
-            <Stack spacing={4}>
-              <HStack display={{ base: "none", md: "flex" }}>
+            <Stack>
+              <SimpleGrid columns={{ base: 1, md: 4 }} gap={6}>
                 <Box>
                   <FormControl id="host" isRequired>
                     <FormLabel>Host</FormLabel>
@@ -90,57 +90,15 @@ export const HomePage = () => {
                   <FormControl id="password" isRequired>
                     <FormLabel>Contraseña</FormLabel>
                     <Input
-                      type="text"
+                      type="password"
                       value={password}
                       onChange={handleChangePassword}
                     />
                   </FormControl>
                 </Box>
-              </HStack>
-              <Stack display={{ md: "none" }}>
-                <Box>
-                  <FormControl id="host" isRequired>
-                    <FormLabel>Host</FormLabel>
-                    <Input
-                      type="text"
-                      value={host}
-                      onChange={handleChangeHost}
-                    />
-                  </FormControl>
-                </Box>
-                <Box>
-                  <FormControl id="port" isRequired>
-                    <FormLabel>Puerto</FormLabel>
-                    <Input
-                      type="text"
-                      value={port}
-                      onChange={handleChangePort}
-                    />
-                  </FormControl>
-                </Box>
-                <Box>
-                  <FormControl id="username" isRequired>
-                    <FormLabel>Usuario</FormLabel>
-                    <Input
-                      type="text"
-                      value={username}
-                      onChange={handleChangeUsername}
-                    />
-                  </FormControl>
-                </Box>
-                <Box>
-                  <FormControl id="password" isRequired>
-                    <FormLabel>Contraseña</FormLabel>
-                    <Input
-                      type="text"
-                      value={password}
-                      onChange={handleChangePassword}
-                    />
-                  </FormControl>
-                </Box>
-              </Stack>
+              </SimpleGrid>
 
-              <Stack spacing={10} pt={2}>
+              <Stack pt={6}>
                 <Button
                   size="lg"
                   _hover={{
